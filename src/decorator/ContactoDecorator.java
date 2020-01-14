@@ -16,7 +16,7 @@ public abstract class ContactoDecorator implements Contacto {
       this.contacto = contacto;
    }
 
-   public void draw(){
+   public void informacao(){
       contacto.informacao();
    }	
 }
