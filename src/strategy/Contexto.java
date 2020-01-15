@@ -17,7 +17,7 @@ public class Contexto {
     }
 
     public Contexto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
     }
     
     //    Se usarem o mesmo nome no argumento de entrada... 
@@ -26,9 +26,9 @@ public class Contexto {
     //        this.estrategia = estrategia; 
     //    }
     
-    public double executaEstrategia(int minutosConsumo, double valorMinuto) {
+    public double executaEstrategia(int minutosConsumo) {
         
-        return estrategia.calculaMensalidade(minutosConsumo, valorMinuto);
+        return estrategia.calculaMensalidade(minutosConsumo);
         
     }
 }

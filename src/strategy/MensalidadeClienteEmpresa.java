@@ -9,12 +9,14 @@ package strategy;
  *
  * @author alexandrebarao
  */
-public class MensalidadeClienteEmpresa implements Estrategia {
+public class MensalidadeClienteEmpresa extends Mensalidade implements Estrategia {
+
+    
      @Override
-    public double calculaMensalidade(int minutosConsumo, double valorMinuto) {
+    public double calculaMensalidade(int minutosConsumo) {
         
-        valorMinuto/=2; // empresa só paga metade do valor por minuto! :) 
         
-        return ( minutosConsumo * valorMinuto );
+        
+        return ( getValorMinuto()/2 * minutosConsumo );
     }
 }

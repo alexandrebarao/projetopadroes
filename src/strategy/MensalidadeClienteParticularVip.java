@@ -10,12 +10,14 @@ package strategy;
  * @author alexandrebarao
  */
 public class MensalidadeClienteParticularVip extends MensalidadeClienteParticular {
+
+   
     @Override
-    public double calculaMensalidade(int minutosConsumo, double valorMinuto) {
+    public double calculaMensalidade(int minutosConsumo) {
         
         valorMinuto/=10; // Vip só paga um décimo do valor por minuto! :) 
         
-        return ( minutosConsumo * valorMinuto );
+        return ( minutosConsumo * getValorMinuto() );
         
     }
 }

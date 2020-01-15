@@ -34,6 +34,7 @@ import state.ProdutoEncomendado;
 import state.ProdutoEnviado;
 import state.ProdutoRecebido;
 import strategy.Contexto;
+import strategy.MensalidadeAlunoVip;
 import strategy.MensalidadeClienteEmpresa;
 import strategy.MensalidadeClienteParticular;
 import strategy.MensalidadeClienteParticularVip;
@@ -143,35 +144,53 @@ public class ProjetoPadroes {
         e.informacao();
         empresa.informacao();
          */
+        
         /*
         // Demonstração do Padrão Facade
         TarifadorFacade tarifador = new TarifadorFacade();
+         
         System.out.println(tarifador.pagamentoMensalParticular());
         System.out.println(tarifador.pagamentoMensalEmpresa());
-         */
+        */
+        
         /*
         // Demonstraçao do Padrão Strategy
         Contexto contexto;
+        
         contexto = new Contexto(new MensalidadeClienteParticular());
-        System.out.println(contexto.executaEstrategia(500, 0.30));
+        System.out.println(contexto.executaEstrategia(500));
+        
         contexto = new Contexto(new MensalidadeClienteEmpresa());
-        System.out.println(contexto.executaEstrategia(500, 0.30));
+        System.out.println(contexto.executaEstrategia(500));
+        
         contexto = new Contexto(new MensalidadeClienteParticularVip());
-        System.out.println(contexto.executaEstrategia(500, 0.30));
-         */
+        System.out.println(contexto.executaEstrategia(500));
+        
+        contexto = new Contexto(new MensalidadeAlunoVip());
+        System.out.println(contexto.executaEstrategia(500));
+        */
+        
         /*
         // Demonstração do Padrão State
         ContextoEstado contexto = new ContextoEstado();
+        
+        
         ProdutoEncomendado estadoInicial = new ProdutoEncomendado();
         estadoInicial.executaAcao(contexto);
         System.out.println(contexto.getEstado().toString());
+
+
         ProdutoEnviado estadoIntermedio = new ProdutoEnviado();
         estadoIntermedio.executaAcao(contexto);
         System.out.println(contexto.getEstado().toString());
+        
+        
         ProdutoRecebido estadoFinal = new ProdutoRecebido();
         estadoFinal.executaAcao(contexto);
         System.out.println(contexto.getEstado().toString());
-         */
+        */ 
+        
+        
         /*
         // Demonstraçao do padrão Command
         List<Comando> listaComandos = new ArrayList<>();
@@ -184,9 +203,12 @@ public class ProjetoPadroes {
         listaComandos.add(new Servidor( "Fazer backup do sistema" ));
         listaComandos.add(new Servidor( "Atualizar Sistema Operativo" ));
         listaComandos.add(new Servidor( "Reiniciar servidor" ));
+        
         Executor executorDeTarefas = new Executor(); 
         executorDeTarefas.executa(listaComandos);
          */
+        
+        
         // Demonstração do padrão Template
         
         

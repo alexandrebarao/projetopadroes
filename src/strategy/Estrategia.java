@@ -10,5 +10,5 @@ package strategy;
  * @author alexandrebarao
  */
 public interface Estrategia {
-    public double calculaMensalidade(int minutosConsumo, double valorMinuto);
+    public double calculaMensalidade(int minutosConsumo);
 }
